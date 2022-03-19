@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  background-color: #000000;
+  color: #888888; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Prata", sans-serif;
+  color: #ffffff; }
+
+h1 {
+  font-size: 3.75rem; }
+
+p {
+  margin: 0;
+  line-height: 1.5; }
+
+.header {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__logo {
+    color: #ffffff;
+    font-family: "Prata", sans-serif; }
+  .header__navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem; }
+    .header__navigation a:link,
+    .header__navigation a:visited {
+      text-decoration: none;
+      color: #888888;
+      transition: all 0.25s; }
+    .header__navigation a:focus,
+    .header__navigation a:hover {
+      color: #ffffff; }
+    .header__navigation a:focus {
+      outline: none; }
+  .header__button:link, .header__button:visited {
+    text-decoration: none;
+    font-family: "Prata", sans-serif;
+    color: #000000;
+    background-color: yellow;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.25s; }
+    .header__button:link:focus, .header__button:visited:focus {
+      outline: none;
+      box-shadow: 0 0 1rem 0.1rem yellow; }
+    .header__button:link:active, .header__button:visited:active {
+      transform: scale(0.9); }
+
+.hero {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 6rem; }
+  .hero__heading, .hero__text {
+    width: 60%;
+    animation: fromLeft 0.5s ease-out; }
+
+.companies {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  animation: fromDown 0.5s ease-out; }
+
+.grid {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem; }
+  .grid img {
+    width: 100%; }
+  .grid h2 {
+    margin-block: 1rem; }
+
+.first-child {
+  animation: fromLeft 0.5s ease-out; }
+
+.second-child {
+  animation: fromRight 0.5s ease-out; }
+
+.gray-background {
+  background-color: #444444;
+  color: #aaaaaa; }
+  .gray-background > div {
+    width: 80%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    padding-block: 4rem; }
+    .gray-background > div h2 {
+      margin-bottom: 1.5rem; }
+    .gray-background > div p {
+      margin-bottom: 2rem; }
+
+.left {
+  animation: fromLeft 0.5s ease-out; }
+
+.right {
+  animation: fromRight 0.5s ease-out; }
+
+.interested {
+  width: 80%;
+  margin-inline: auto;
+  padding-block: 6rem;
+  animation: fromLeft 0.5s ease-out; }
+  .interested > *:not(:last-child) {
+    width: calc(50% - 3rem);
+    margin-bottom: 1rem; }
+
+.btn {
+  text-decoration: none;
+  font-family: "Prata", sans-serif;
+  color: #000000;
+  background-color: yellow;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.25s; }
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 1rem 0.1rem yellow; }
+  .btn:active {
+    transform: scale(0.9); }
+
+.footer {
+  background-color: #444444; }
+  .footer > div {
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer > div h3 {
+      margin-block: 2rem; }
+    .footer > div div {
+      display: flex;
+      gap: 1rem; }
+      .footer > div div img {
+        height: 2rem; }
